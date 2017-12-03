@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -21,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclickLogin(View view)
     {
+        //Login sucess
+
         Intent intent = new Intent(getApplicationContext(), HomeActivity1.class);
         startActivity(intent);
 
