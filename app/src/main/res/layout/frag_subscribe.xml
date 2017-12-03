@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Subscribe"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/active"
+            style="?android:textAppearanceSmall"
+            android:layout_width="200px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="10px"
+            android:background="@color/colorPrimary"
+            android:layout_margin="10px"
+            android:text="Active"
+            android:onClick="onclickactive"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/past"
+            style="?android:textAppearanceSmall"
+            android:layout_width="200px"
+            android:padding="10px"
+            android:onClick="onclickpast"
+            android:background="@color/colorPrimary"
+            android:layout_margin="10px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Past"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/newavail"
+            style="?android:textAppearanceSmall"
+            android:layout_width="200px"
+            android:padding="10px"
+            android:onClick="onclicknewavail"
+            android:background="@color/colorPrimary"
+            android:layout_margin="10px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="NewAvail"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

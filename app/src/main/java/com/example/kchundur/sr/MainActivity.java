@@ -1,5 +1,6 @@
 package com.example.kchundur.sr;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,13 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclickLogin(View view)
     {
-
+        Intent intent = new Intent(getApplicationContext(), HomeActivity1.class);
+        startActivity(intent);
 
 
     }
     public void onclickSignUp(View view)
     {
-
+        Intent intent = new Intent(getApplicationContext(), Signup.class);
+        startActivity(intent);
 
     }
 
