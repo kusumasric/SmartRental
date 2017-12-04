@@ -18,6 +18,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import org.json.JSONObject;
 
@@ -35,6 +38,7 @@ public class Signup extends Activity {
    int memberid=0;
    private TextView sug_ser;
     String service_selected=" ";
+    int memid=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +137,8 @@ public class Signup extends Activity {
         String name,password,email,addr,fname,lname;
         boolean res=false;
 
+
+
         name=et_Name.getText().toString();
         password=et_Pass.getText().toString();
         email=et_email.getText().toString();
@@ -166,9 +172,16 @@ public class Signup extends Activity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("resonse","success");
+                       /* JsonElement root = new JsonParser().parse(String.valueOf(response));
+                        Gson gson = new Gson();
+                        Member mem=new Member();
+                        mem = gson.fromJson(String.valueOf(response), Member.class);
+                        Log.d("resonse","success" + mem.Memberid);
+                        memid=mem.getMemberid();
+                        memid= (int) root.getAsJsonObject().get("data").getAsNumber();*/
+                        Log.d("data",Integer.toString(memid));
                         Intent intent = new Intent(getApplicationContext(), HomeActivity1.class);
-                        intent.putExtra("servcie",wservice);
+                        intent.putExtra("Service",wservice);
                         startActivity(intent);
                     }
                 },
