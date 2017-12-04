@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,10 +29,12 @@ import java.util.Random;
  * Created by kchundur on 12/3/2017.
  */
 
-public class Signup extends Activity  {
+public class Signup extends Activity {
     private EditText et_Name,et_Pass, et_Address,et_fname,et_lname,et_email;
    String wservice;
    int memberid=0;
+   private TextView sug_ser;
+    String service_selected=" ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +48,45 @@ public class Signup extends Activity  {
         et_fname=(EditText)findViewById(R.id.fname);
         et_lname=(EditText)findViewById(R.id.Lname);
         et_email=(EditText)findViewById(R.id.email);
-
+        sug_ser=(TextView)findViewById(R.id.sug_service);
+        sug_ser.setText(wservice.toString());
         Spinner spinner = (Spinner) findViewById(R.id.Spinner_service);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.Service_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+         @Override
+          public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if(position==1)
+                {
+                    service_selected="Service1";
+                }
+
+                if(position==2) {
+                    service_selected="service2";
+
+                }
+                if(position==3)
+                {
+                    service_selected="service3";
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+
+
+
+
 
     }
 

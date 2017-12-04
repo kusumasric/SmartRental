@@ -21,11 +21,16 @@ import android.support.v4.app.FragmentTransaction;
 public class HomeActivity1 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    android.app.FragmentTransaction ft;
+    Fragment fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home1);
+         fragment = new Calculation();
+        ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame,fragment);
+        ft.commit();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -75,8 +80,7 @@ public class HomeActivity1 extends AppCompatActivity
     private void displaySelectedScreen(int itemId) {
 
         //creating fragment object
-        Fragment fragment = null;
-
+      
         //initializing the fragment object which is selected
         switch (itemId) {
             case R.id.nav_sub:
@@ -95,8 +99,7 @@ public class HomeActivity1 extends AppCompatActivity
 
         //replacing the fragment
         if (fragment != null) {
-            android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.content_frame,fragment);
+          ft.replace(R.id.content_frame,fragment);
             ft.commit();
         }
 
