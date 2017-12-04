@@ -14,6 +14,7 @@ public class SpinnerActivity implements AdapterView.OnItemSelectedListener {
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
 
+
     }
 
     public void onNothingSelected(AdapterView<?> parent) {

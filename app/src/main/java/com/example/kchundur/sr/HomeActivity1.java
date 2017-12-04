@@ -21,6 +21,7 @@ import android.support.v4.app.FragmentTransaction;
 public class HomeActivity1 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

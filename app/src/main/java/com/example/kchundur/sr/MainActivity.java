@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        wservice= getIntent().getStringExtra("Service");
+        wservice= getIntent().getStringExtra("Service").toString();
         et_Name = (EditText)findViewById(R.id.name);
         et_Pass = (EditText)findViewById(R.id.password);
     }
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void onclickSignUp(View view)
     {
         Intent intent = new Intent(getApplicationContext(), Signup.class);
-        intent.putExtra("servcie",wservice);
+        intent.putExtra("Service",wservice);
         startActivity(intent);
 
     }
@@ -82,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("resonse","success");
+
                         Intent intent = new Intent(getApplicationContext(), HomeActivity1.class);
+                        intent.putExtra("service",wservice);
                         startActivity(intent);
                     }
                 },

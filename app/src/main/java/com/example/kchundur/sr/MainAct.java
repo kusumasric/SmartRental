@@ -42,7 +42,7 @@ public class MainAct extends Activity {
     public void onclickNext(View view)
     {
 
-         String wservice=Servicedetails(s1);
+         wservice=Servicedetails(s1);
 
          Intent intent = new Intent(getApplicationContext(), MainActivity.class);
          intent.putExtra("Service",wservice);
@@ -54,9 +54,9 @@ public class MainAct extends Activity {
     {
         String result="";
         if(select.equals("spr1 sp2r2 sp3r3 sp4r1"))
-            wservice="Service1";
+            result="Service1";
         else if(select.equals("spr1 sp2r1 sp3r1 sp4r1"))
-            wservice="Service2";
+            result="Service2";
         return result;
     }
 
