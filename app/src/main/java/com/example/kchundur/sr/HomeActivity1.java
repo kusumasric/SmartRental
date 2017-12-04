@@ -102,7 +102,7 @@ public class HomeActivity1 extends AppCompatActivity
             android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame,fragment);
             ft.commit();
-         
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
