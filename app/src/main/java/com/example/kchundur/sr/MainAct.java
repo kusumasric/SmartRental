@@ -15,6 +15,9 @@ import android.widget.TextView;
 public class MainAct extends Activity {
 
     TextView t;
+    String wservice;
+    String s1="";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,6 @@ public class MainAct extends Activity {
     protected void onResume() {
         super.onResume();
         Intent b=getIntent();
-        String s1="";
              s1=(b.getStringExtra("answer1").toString()) + " " ;
              s1= s1  + (getIntent().getStringExtra("answer2").toString()) + " " ;
              s1=s1+ (getIntent().getStringExtra("answer3").toString())+ " ";
@@ -40,9 +42,22 @@ public class MainAct extends Activity {
     public void onclickNext(View view)
     {
 
+         String wservice=Servicedetails(s1);
+
          Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+         intent.putExtra("Service",wservice);
          startActivity(intent);
 
+    }
+
+    public String Servicedetails(String select)
+    {
+        String result="";
+        if(select.equals("spr1 sp2r2 sp3r3 sp4r1"))
+            wservice="Service1";
+        else if(select.equals("spr1 sp2r1 sp3r1 sp4r1"))
+            wservice="Service2";
+        return result;
     }
 
 }

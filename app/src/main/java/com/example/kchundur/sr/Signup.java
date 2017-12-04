@@ -13,11 +13,15 @@ import android.widget.Spinner;
 
 public class Signup extends Activity {
     private EditText et_Name,et_Pass, et_ConPass , et_email, et_phonenumber;
+   String wservice;
+   int memberid=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_signup);
+        wservice= getIntent().getStringExtra("Service");
+
         et_Name = (EditText)findViewById(R.id.name);
         et_Pass = (EditText)findViewById(R.id.password);
         et_ConPass = (EditText)findViewById(R.id.ConfirmPassword);
