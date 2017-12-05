@@ -22,6 +22,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -172,16 +173,21 @@ public class Signup extends Activity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                       /* JsonElement root = new JsonParser().parse(String.valueOf(response));
-                        Gson gson = new Gson();
-                        Member mem=new Member();
-                        mem = gson.fromJson(String.valueOf(response), Member.class);
-                        Log.d("resonse","success" + mem.Memberid);
-                        memid=mem.getMemberid();
-                        memid= (int) root.getAsJsonObject().get("data").getAsNumber();*/
-                        Log.d("data",Integer.toString(memid));
+                        String memid="",username="";
+
+                        try {
+
+                            memid=response.getString("MemberID");
+                            username=response.getString("UserName");
+                            Log.d("memberid",memid);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
                         Intent intent = new Intent(getApplicationContext(), HomeActivity1.class);
                         intent.putExtra("Service",wservice);
+                        intent.putExtra("memid",memid);
+                        intent.putExtra("username",username);
                         startActivity(intent);
                     }
                 },

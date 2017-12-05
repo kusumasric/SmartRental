@@ -21,15 +21,25 @@ import android.support.v4.app.FragmentTransaction;
 public class HomeActivity1 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    String wservice="",memid="",username="";
+    Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home1);
+        wservice= getIntent().getStringExtra("Service").toString();
+        memid=getIntent().getStringExtra("memid").toString();
+        username=getIntent().getStringExtra("username").toString();
+
         Fragment fragment = new Calculation();
         android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame,fragment);
         ft.commit();
+
+        bundle= new Bundle();
+        bundle.putString("username", username);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -94,6 +104,7 @@ public class HomeActivity1 extends AppCompatActivity
                 break;
             case R.id.nav_prof:
                 fragment = new Profile();
+                fragment.setArguments(bundle);
                 break;
         }
 

@@ -33,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:id="@+id/name"
             android:layout_margin="10dp"
             android:layout_gravity="right"
             android:text="Name" />
@@ -51,7 +52,7 @@
             android:textSize="20dp"
             android:layout_gravity="left"
             android:layout_margin="10dp"
-            android:text="Phone" />
+            android:text="EmailID" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,7 +60,8 @@
             android:textSize="20dp"
             android:layout_margin="10dp"
             android:layout_gravity="right"
-            android:text="Phone" />
+            android:id="@+id/email"
+            android:text="EmailID" />
 
     </LinearLayout>
 
@@ -75,7 +77,7 @@
             android:textSize="20dp"
             android:layout_gravity="left"
             android:layout_margin="10dp"
-            android:text="City" />
+            android:text="FirstName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -83,7 +85,8 @@
             android:textSize="20dp"
             android:layout_margin="10dp"
             android:layout_gravity="right"
-            android:text="City" />
+            android:id="@+id/fname"
+            android:text="FirstName" />
 
     </LinearLayout>
     <LinearLayout
@@ -98,7 +101,7 @@
             android:textSize="20dp"
             android:layout_gravity="left"
             android:layout_margin="10dp"
-            android:text="State" />
+            android:text="LastName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,7 +109,8 @@
             android:textSize="20dp"
             android:layout_margin="10dp"
             android:layout_gravity="right"
-            android:text="State" />
+            android:id="@+id/lname"
+            android:text="LastName" />
 
 
     </LinearLayout>
@@ -123,7 +127,7 @@
             android:textSize="20dp"
             android:layout_gravity="left"
             android:layout_margin="10dp"
-            android:text="Email" />
+            android:text="Address" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,11 +135,35 @@
             android:textSize="20dp"
             android:layout_margin="10dp"
             android:layout_gravity="right"
-            android:text="Email" />
+            android:id="@+id/address"
+            android:text="Address" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:text="Password" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="0dp"
+            android:layout_gravity="right"
+            android:id="@+id/edit_pass"
+            android:text="" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

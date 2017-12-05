@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -82,9 +83,22 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("resonse","success");
+                        String memid="",username="";
+
+                        try {
+
+                            memid=response.getString("MemberID");
+                            username=response.getString("UserName");
+
+                            Log.d("memberid",memid);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
                         Intent intent = new Intent(getApplicationContext(), HomeActivity1.class);
-                        intent.putExtra("service",wservice);
+                        intent.putExtra("Service",wservice);
+                        intent.putExtra("memid",memid);
+                        intent.putExtra("username",username);
                         startActivity(intent);
                     }
                 },
