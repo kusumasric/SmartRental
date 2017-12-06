@@ -22,17 +22,17 @@ public class MainAct extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_question);
-         t=(TextView)findViewById(R.id.txt1);
+        t=(TextView)findViewById(R.id.txt1);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Intent b=getIntent();
-             s1=(b.getStringExtra("answer1").toString()) + " " ;
-             s1= s1  + (getIntent().getStringExtra("answer2").toString()) + " " ;
-             s1=s1+ (getIntent().getStringExtra("answer3").toString())+ " ";
-             s1=s1+ (getIntent().getStringExtra("answer4").toString());
+        s1=(b.getStringExtra("answer1").toString()) + " " ;
+        s1= s1  + (getIntent().getStringExtra("answer2").toString()) + " " ;
+        s1=s1+ (getIntent().getStringExtra("answer3").toString())+ " ";
+        s1=s1+ (getIntent().getStringExtra("answer4").toString());
         t.setText(s1);
         Log.d("myTag", (String) t.getText());
 
@@ -42,11 +42,11 @@ public class MainAct extends Activity {
     public void onclickNext(View view)
     {
 
-         wservice=Servicedetails(s1);
+        wservice=Servicedetails(s1);
 
-         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-         intent.putExtra("Service",wservice);
-         startActivity(intent);
+        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+        intent1.putExtra("Service",wservice);
+        startActivity(intent1);
 
     }
 

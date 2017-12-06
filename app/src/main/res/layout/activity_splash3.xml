@@ -7,7 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Splash3" />
+        android:text="Whould you like to have Solar Energy?" />
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -15,7 +15,7 @@
             android:id="@+id/sp3r1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sp3r1"
+            android:text="Produces upto 100kwt/hr"
             android:onClick="onRadioButtonClick"
             />
 
@@ -24,14 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="sp3r2" />
+            android:text="produces upto 60kwt/hr" />
 
         <RadioButton
             android:id="@+id/sp3r3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="sp3r3" />
+            android:text="produces upto 50kwt/hr" />
     </RadioGroup>
 
     <Button

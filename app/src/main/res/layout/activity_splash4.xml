@@ -7,7 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Splash4" />
+        android:text="Would you like to have window films?" />
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -15,7 +15,7 @@
             android:id="@+id/sp4r1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sp4r1"
+            android:text=" Energy savings up to 15%."
             android:onClick="onRadioButtonClick"
             />
 
@@ -24,14 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="sp4r2" />
+            android:text=" Energy savings up to 5%." />
 
         <RadioButton
             android:id="@+id/sp4r3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="sp4r3" />
+            android:text=" Energy savings up to 8%." />
     </RadioGroup>
 
     <Button

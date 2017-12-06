@@ -7,7 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Splash2" />
+        android:text="Would you like to have smart lighting?" />
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -15,7 +15,7 @@
             android:id="@+id/sp2r1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sp2r1"
+            android:text="Saves upto 7% "
             android:onClick="onRadioButtonClick"
             />
 
@@ -24,14 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="sp2r2" />
+            android:text="saves upto 5% " />
 
         <RadioButton
             android:id="@+id/sp2r3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="sp2r3" />
+            android:text="saves upto 3%" />
     </RadioGroup>
 
     <Button

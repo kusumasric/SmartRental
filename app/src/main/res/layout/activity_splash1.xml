@@ -7,7 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Splash1" />
+        android:text="Would you like to have Air conditioning (HVAC)?" />
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -15,7 +15,7 @@
         android:id="@+id/spr1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="spr1"
+        android:text="saves upto 8%"
         android:onClick="onRadioButtonClick"
         />
 
@@ -24,14 +24,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onRadioButtonClick"
-        android:text="spr2" />
+        android:text="saves upto 3%" />
 
     <RadioButton
         android:id="@+id/spr3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onRadioButtonClick"
-        android:text="spr3" />
+        android:text="saves upto 2%" />
     </RadioGroup>
 
     <Button

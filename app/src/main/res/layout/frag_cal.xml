@@ -127,7 +127,6 @@
             android:background="@color/colorPrimary"
             android:layout_margin="10px"
             android:text="pay and SUBMIT"
-            android:onClick="onclickactive"
             android:textStyle="bold" />
 
 
